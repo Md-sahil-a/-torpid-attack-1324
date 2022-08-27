@@ -1,28 +1,18 @@
 import "./home.css";
 const Home = () => {
   return (
-    <div className="nav">
-      <div>
-        <p>HOme</p>
+    <div className="main-container">
+      <div className="container">
+      <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep2/v2/2022sep_0823_hp_w_img0em.jpg" />
+      <div className="centered">
+        <p>Introducing</p>
+        <h1>Italian</h1>
+        <p>City Wood</p>
+        <article className="text">OUR SOFT YET STRUCTURED, TAKE ON SUITING IN A LUKE FABRIC FROM PRATO ITALY</article>
       </div>
-      <div><p>cart</p></div>
+      </div>
+      <div><img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep2/v2/2022sep_0823_hp_w_img0dm.jpg"/></div>
     </div>
-
   );
 };
 export default Home;
-
-
-
-{/* <div class="navbar">
-<a href="#home">Home</a>
-<a href="#news">News</a>
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-</div> */}
