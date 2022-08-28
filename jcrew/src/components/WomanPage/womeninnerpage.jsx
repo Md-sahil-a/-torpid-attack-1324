@@ -31,7 +31,7 @@ export const WoMenInnerPage = () => {
       <div className="manPage que">
         <p>Have a Question? we can Help.</p>
       </div>
-      <div className="links">Home /Man /AllCLothing</div>
+      <div className="links">Home /Woman /AllCLothing</div>
       <h1>All new tredns for woman</h1>
       <div className="sort">
         <button>Hide Filters</button>
