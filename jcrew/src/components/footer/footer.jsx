@@ -1,4 +1,5 @@
-
+import '../manpages/man.innerPage.css' 
+import '../homecomponent/home.css'
 import {
     AiOutlineTwitter,
     AiFillInstagram,

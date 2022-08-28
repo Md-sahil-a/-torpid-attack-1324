@@ -1,0 +1,40 @@
+
+.bignav{
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.nav1{
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav2{
+    display: flex;
+    gap: 20px;
+}
+
+.inpt{
+    width: 130px;
+    height: 20px;
+    
+}
+
+
+.no{
+    color: black;
+    font-size: 9px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nope{
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+    color: black
+    ;
+}

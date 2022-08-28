@@ -1,47 +1,71 @@
-import "./manpage.css";
-import "../homecomponent/home.css";
-import {
-  AiOutlineTwitter,
-  AiFillInstagram,
-  AiOutlineCopyrightCircle,
-} from "react-icons/ai";
-import { MdCall, MdEmail } from "react-icons/md";
-import { BsPinterest, BsFacebook, BsYoutube, BsLinkedin } from "react-icons/bs";
-import { Footer } from "../footer/footer";
-import { Link } from "react-router-dom";
 
-export const ManPage = () => {
+import "../manpages/manpage.css";
+import "../homecomponent/home.css";
+import '../manpages/man.innerPage.css'
+import womandata from '../database/womandb.json'
+import { useEffect, useState } from "react";
+import { Footer } from "../footer/footer";
+
+
+export const WoMenInnerPage = () => {
+    const[thedata, setData] = useState([]);
+    const[order, setorder] = useState(true);
+    useEffect(()=>{
+        setData(womandata.data);
+    },[]);
+   
+
+    const HandleAll = ()=>{
+        if(order === false){
+    
+          var d = thedata.sort((a,b)=> (b.price - a.price));
+        }else{
+          var d = thedata.sort((a,b)=> (a.price - b.price));
+        }
+         setData([...d]);
+         setorder(!order)
+      }
+    
   return (
     <>
-    <div className="manPage que">
-    <p>Have a Question? we can Help.</p>
-    </div>
-      <div className="manContainer1">
-        <img src="https://www.jcrew.com/brand_creative/homepage2022/09-Sep2/2022sep_0823_hp_m_img0.jpg" />
+      <div className="manPage que">
+        <p>Have a Question? we can Help.</p>
       </div>
-      <div className="manPage">
-        <Link to='innerman' ><p>Shop Stories & More</p></Link>
+      <div className="links">Home /Man /AllCLothing</div>
+      <h1>All new tredns for woman</h1>
+      <div className="sort">
+        <button>Hide Filters</button>
+        <button onClick={()=>HandleAll()}>
+        {order === true  ? "High price" : "Low price"}
+        </button>
       </div>
-      <div className="manContainer2">
-        <div>
-          <img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/2022sep_0823_flyout_m_img0.jpg" />
-          <p>Introducing heritage oz fleece</p>
+      <div className="bigcontainer">
+        <div className="div1">
+          <p className="dark">Categories</p>
+          <input type="checkbox" /> Double knit(9)
+          <br></br>
+          <input type="checkbox" /> French Terry(1)
+          <br></br>
+          <input type="checkbox" /> Pull Overs(9)
+          <br></br>
+          <input type="checkbox" /> Hoodies(4)
+          <br></br>
         </div>
-        <div>
-          <img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/2022sep_0823_flyout_m_img1.jpg" />
-          <p>The september collection</p>
+        <div className="div2">
+            {
+                thedata.map((da)=>{
+                    return (
+                        <div key={da.id} className="mapped-mandata">
+                        <img src={da.img} alt="img"/>
+                            <p>{da.title}</p>
+                            <p>{`Rupees ${da.price}`}</p>
+                            <button >Add to cart</button>
+                        </div>
+                    )
+                })
+            
+            }
         </div>
-        <div>
-          <img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/2022sep_0823_flyout_m_img2.jpg" />
-          <p>The evolution of suiting</p>
-        </div>
-        <div>
-          <img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/2022sep_0823_flyout_m_img3.jpg" />
-          <p>The Denim days</p>
-        </div>
-      </div>
-      <div className="container-8">
-        <p>More you need to see</p>
       </div>
       <div className="container-9">
         <div>
@@ -96,7 +120,7 @@ export const ManPage = () => {
             season and we’ve got a shoe for that. So come on, get your kicks…
           </article>
         </div>
-        <Footer/>
+      <Footer />
     </>
   );
 };

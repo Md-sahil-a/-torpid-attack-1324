@@ -2,12 +2,27 @@ import "./manpage.css";
 import "../homecomponent/home.css";
 import ".//man.innerPage.css";
 import mandata from '../database/mandb.json'
-
+import { useEffect, useState } from "react";
 import { Footer } from "../footer/footer";
 
 export const ManInnerPage = () => {
+    const[thedata, setData] = useState([]);
+    const[order, setorder] = useState(true);
+    useEffect(()=>{
+        setData(mandata.data);
+    },[]);
 
-
+    const HandleAll = ()=>{
+        if(order === false){
+    
+          var d = thedata.sort((a,b)=> (b.price - a.price));
+        }else{
+          var d = thedata.sort((a,b)=> (a.price - b.price));
+        }
+         setData([...d]);
+         setorder(!order)
+      }
+    
   return (
     <>
       <div className="manPage que">
@@ -27,7 +42,9 @@ export const ManInnerPage = () => {
       </div>
       <div className="sort">
         <button>Hide Filters</button>
-        <button>Sort</button>
+        <button onClick={()=>HandleAll()}>
+        {order === true  ? "High price" : "Low price"}
+        </button>
       </div>
       <div className="bigcontainer">
         <div className="div1">
@@ -43,12 +60,12 @@ export const ManInnerPage = () => {
         </div>
         <div className="div2">
             {
-                mandata.data.map((da)=>{
+                thedata.map((da)=>{
                     return (
                         <div key={da.id} className="mapped-mandata">
                         <img src={da.img} alt="img"/>
                             <p>{da.title}</p>
-                            <p>{da.price}</p>
+                            <p>{`Rupees ${da.price}`}</p>
                             <button >Add to cart</button>
                         </div>
                     )

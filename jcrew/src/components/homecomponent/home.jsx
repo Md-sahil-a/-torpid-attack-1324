@@ -3,6 +3,7 @@ import { AiOutlineTwitter, AiFillInstagram,AiOutlineCopyrightCircle} from "react
 import { MdCall, MdEmail } from "react-icons/md";
 import {BsPinterest, BsFacebook, BsYoutube, BsLinkedin} from 'react-icons/bs';
 import { Footer } from "../footer/footer";
+import { Outlet } from "react-router-dom";
 
 
 const Home = () => {
@@ -191,6 +192,7 @@ const Home = () => {
         </div>
       </div>
      <Footer/>
+     <Outlet/>
     </>
   );
 };
