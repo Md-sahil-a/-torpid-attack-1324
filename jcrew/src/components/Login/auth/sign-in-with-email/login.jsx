@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   CreateAuthWithEmail,
   createrUserFromAuth,
@@ -8,6 +9,7 @@ import FormInput from "../../form/form-input";
 import Button from "../../btn/btn-component";
 
 import "../../btn/btn.scss";
+import { Footer } from "../../../footer/footer";
 
 const defaultFormFields = {
   displayName: "",
@@ -88,6 +90,7 @@ const EmailLSignup = () => {
         />
         <Button type="submit"> SignUp</Button>
       </form>
+    
     </div>
   );
 };

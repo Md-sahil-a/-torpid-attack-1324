@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { MdCall, MdEmail } from "react-icons/md";
 import { BsPinterest, BsFacebook, BsYoutube, BsLinkedin } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 export const Woman = () => {
   return (
@@ -33,7 +34,7 @@ export const Woman = () => {
         </div>
       </div>
       <div className="manPage">
-        <p>Shop Stories & More</p>
+        <Link to='womanpage'><p>Shop Stories & More</p></Link>
       </div>
       <div className="manContainer2">
         <div>
