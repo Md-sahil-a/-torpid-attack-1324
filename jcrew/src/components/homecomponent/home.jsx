@@ -220,7 +220,7 @@ const Home = () => {
               <p>My Favorites</p>
             </div>
             <div>
-              <p>About J.Crew</p>
+              <p className="dark">About J.Crew</p>
               <p>Our Story</p>
               <p>Careers</p>
               <p>Social Responsibility</p>
@@ -232,7 +232,7 @@ const Home = () => {
             </div>
           </div>
           <div className="like">
-            <p>Like Being First?</p>
+            <p className="dark">Like Being First?</p>
             <p className="miss">
               Get can't-miss style news, before everybody else.
             </p>
