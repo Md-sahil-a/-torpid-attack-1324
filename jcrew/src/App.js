@@ -3,9 +3,9 @@ import { ManPage } from "./components/manpages/manpage.jsx";
 import { ManInnerPage } from "./components/manpages/man.innerPage";
 import { Woman } from "./components/WomanPage/womanPage";
 import Sign from "./components/Login/auth/complete-auth.jsx";
-// import Nav from './components/homecomponent/navroute/nav.jsx'
 import { WoMenInnerPage } from "./components/WomanPage/womeninnerpage.jsx";
 import { Route, Routes } from "react-router-dom";
+import { Cart } from "./components/Cart/cart.jsx";
 
 import { Nav2 } from "./components/TESTnav";
 const App = () => {
@@ -25,6 +25,7 @@ const App = () => {
         <Route path="login" element={<Sign/>}/>
         <Route path="man/innerman" element={<ManInnerPage/>}/>
         <Route path="woman/womanpage" element={<WoMenInnerPage/>}/>
+        <Route path="cart"  element={<Cart/>}/>
       </Route>
     </Routes>
     </>

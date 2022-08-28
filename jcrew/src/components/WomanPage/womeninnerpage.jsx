@@ -1,5 +1,4 @@
 
-
 import "../manpages/manpage.css";
 import "../homecomponent/home.css";
 import '../manpages/man.innerPage.css'
@@ -7,12 +6,14 @@ import womandata from '../database/womandb.json'
 import { useEffect, useState } from "react";
 import { Footer } from "../footer/footer";
 
+
 export const WoMenInnerPage = () => {
     const[thedata, setData] = useState([]);
     const[order, setorder] = useState(true);
     useEffect(()=>{
         setData(womandata.data);
     },[]);
+   
 
     const HandleAll = ()=>{
         if(order === false){

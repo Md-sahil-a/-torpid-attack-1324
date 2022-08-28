@@ -29,7 +29,7 @@ export const Nav2 = () => {
           )}
           
         </div>
-        <CartIcon/>
+        <Link to='cart'><CartIcon/></Link> 
       </div>
       <Outlet />
     </>
