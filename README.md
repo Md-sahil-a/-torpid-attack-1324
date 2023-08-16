@@ -1,4 +1,4 @@
-👗 J.Crew Website Clone -  Discover the art of fashion with our J.Crew website replica built on React.js. Immerse yourself in a curated selection of trendy clothing and accessories, capturing the essence of the renowned J.Crew brand. This clone faithfully recreates the original design and functionalities, offering responsive layouts and smooth navigation. Embark on a stylish journey with this dynamic web clone. Your new wardrobe adventure awaits! 🛍️👠🌟
+👗 J.Crew Website Clone -  Discover the art of fashion with our J.Crew website replica built on React.js. Immerse yourself in a curated selection of trendy clothing and accessories, capturing the essence of the renowned J.Crew brand. This clone faithfully recreates the original design and functionalities, offering responsive layouts and smooth navigation. Embark on a stylish journey with this dynamic web clone. Your new wardrobe adventure awaits! 👠👕👖
 
 **OUTPUT**
 
